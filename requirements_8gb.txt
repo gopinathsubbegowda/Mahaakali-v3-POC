@@ -1,0 +1,28 @@
+# Minimal Dependencies for 8GB RAM Windows 10 System
+# Optimized for low memory usage
+
+# Core - Ollama Client
+ollama>=0.1.0
+
+# Configuration
+pydantic-settings>=2.0.0
+python-dotenv>=1.0.0
+
+# Document Processing (Lightweight)
+PyPDF2>=3.0.0
+
+# CLI Interface
+rich>=13.7.0
+
+# Language Processing (Minimal)
+spacy==3.2.4
+# Install model separately:
+# python -m spacy download en_core_web_sm
+
+# Optional: If you want basic NER (adds ~300MB)
+# opennyai>=0.0.10
+
+# NOT INCLUDED (Too heavy for 8GB):
+# chromadb  - Use SQLite instead
+# transformers - Too heavy
+# torch - Not needed for Ollama
